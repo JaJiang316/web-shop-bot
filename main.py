@@ -46,9 +46,9 @@ def main():
     browser.find_element(
         by=By.CLASS_NAME, value='sign-in-btn').click()
     browser.find_element(
-        by=By.NAME, value='fld-e').send_keys('jasonjiang316@gmail.com')
+        by=By.NAME, value='fld-e').send_keys(os.environ.get('email'))
     browser.find_element(
-        by=By.NAME, value='fld-p1').send_keys(os.environ.get('pass'))
+        by=By.NAME, value='fld-p1').send_keys(os.environ.get('password'))
     browser.find_element(
         by=By.CLASS_NAME, value='cia-form__controls__submit').click()
     if(on_sale() == True):
